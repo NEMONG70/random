@@ -11,10 +11,7 @@ function random(Arr) {
   let index = -1
   for (const [i, e] of Arr.entries()) {
     const pre = asdf(sum(i - 1))
-    if ((i === 0 && e.per <= ran) || (i === Arr.length - 1 && pre <= ran) || pre <= ran && asdf(sum(i)) > ran) {
-      index = i
-      break
-    }
+    if ((i === 0 && e.per <= ran) || (i === Arr.length - 1 && pre <= ran) || (pre <= ran && asdf(sum(i)) > ran)) index = i
   }
   return Arr[index].value
 }
