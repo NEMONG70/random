@@ -7,7 +7,6 @@ function random(Arr: Array<{ value: any; per: number }>): any {
   const max = Number(`1${'0'.repeat(trl(Arr.sort((a, b) => trl(b.per) - trl(a.per))[0].per))}`)
   const ran = ((Math.random() * max) | 0) + 1
   const asdf = (n: number): number => n.toString().includes('.') ? Number(n.toString().replace('.', '')) : Number(n.toString() + '0'.repeat(max.toString().slice(3).length))
-  const PN = max > 100
   let index = -1
   for (const [i, e] of Arr.entries()) {
     const pre = asdf(sum(i - 1))
