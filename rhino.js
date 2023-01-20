@@ -11,9 +11,7 @@ function random(Arr) {
   let index = -1
   Arr.forEach((e, i) => {
     const pre = asdf(sum(i - 1))
-    if (i === 0 && e.per <= ran) return index = i
-    else if (i === Arr.length - 1 && pre <= ran) return index = i
-    else if (pre <= ran && asdf(sum(i)) > ran) return index = i
+    if ((i === 0 && e.per <= ran) || (i === Arr.length - 1 && pre <= ran) || (pre <= ran && asdf(sum(i)) > ran)) index = i
   })
   return Arr[index].value
 }
